@@ -1,6 +1,6 @@
 import { Route } from '@angular/router';
 
-import { UserRouteAccessService } from 'app/core';
+import { UserRouteAccessService } from '../../core';
 import { ActivateComponent } from './activate.component';
 
 export const activateRoute: Route = {

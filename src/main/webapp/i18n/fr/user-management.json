@@ -1,8 +1,8 @@
 {
     "userManagement": {
         "home": {
-            "title": "Utilisateurs",
-            "createLabel": "Créer un nouvel utilisateur",
+            "title": "Liste des utilisateurs",
+            "createLabel": "Nouvel utilisateur",
             "createOrEditLabel": "Créer ou éditer un utilisateur"
         },
         "created": "L'utilisateur {{ param }} a été créé.",

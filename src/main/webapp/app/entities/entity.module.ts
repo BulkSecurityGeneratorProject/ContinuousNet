@@ -5,6 +5,7 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 @NgModule({
     // prettier-ignore
     imports: [
+
         /* jhipster-needle-add-entity-module - JHipster will add entity modules here */
     ],
     declarations: [],

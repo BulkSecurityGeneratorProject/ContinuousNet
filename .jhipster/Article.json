@@ -1,0 +1,39 @@
+{
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "relationships": [
+        {
+            "relationshipName": "creator",
+            "otherEntityName": "user",
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": [],
+            "otherEntityField": "login",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "article"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "title",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "minlength",
+                "maxlength"
+            ],
+            "fieldValidateRulesMinlength": "4",
+            "fieldValidateRulesMaxlength": 20
+        },
+        {
+            "fieldName": "creationDate",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "changelogDate": "20181214164602",
+    "dto": "no",
+    "searchEngine": false,
+    "service": "serviceClass",
+    "entityTableName": "article",
+    "jpaMetamodelFiltering": false,
+    "pagination": "infinite-scroll"
+}

@@ -111,8 +111,16 @@
                         </small>
                     </div>
                 </div>
+                <div>
+                    <button type="button" class="btn btn-secondary" (click)="previousState()">
+                        <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span
+                        jhiTranslate="entity.action.cancel">Cancel</span>
+                    </button>
 
-                <button type="submit" [disabled]="registerForm.form.invalid" class="btn btn-primary" jhiTranslate="register.form.button">Register</button>
+                    <button type="submit" [disabled]="registerForm.form.invalid" class="btn btn-primary" jhiTranslate="register.form.button">Register</button>
+                </div>
+
+                
             </form>
             <p></p>
             <div class="alert alert-warning">

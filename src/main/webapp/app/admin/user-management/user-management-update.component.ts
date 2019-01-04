@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { JhiLanguageHelper, User, UserService } from 'app/core';
+import { JhiLanguageHelper, User, UserService } from '../../core';
 
 @Component({
     selector: 'jhi-user-mgmt-update',

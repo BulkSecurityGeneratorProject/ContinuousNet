@@ -78,7 +78,14 @@
                         <option *ngFor="let language of languages" [value]="language">{{language | findLanguageFromKey}}</option>
                     </select>
                 </div>
-                <button type="submit" [disabled]="settingsForm.form.invalid" class="btn btn-primary" jhiTranslate="settings.form.button">Save</button>
+                <div>
+                    <button type="button" class="btn btn-secondary" (click)="previousState()">
+                        <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span
+                        jhiTranslate="entity.action.cancel">Cancel</span>
+                    </button>
+
+                    <button type="submit" [disabled]="settingsForm.form.invalid" class="btn btn-primary" jhiTranslate="settings.form.button">Save</button>
+                </div>
             </form>
         </div>
     </div>

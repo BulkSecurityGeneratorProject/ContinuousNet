@@ -3,9 +3,10 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { JhiLanguageService } from 'ng-jhipster';
 
-import { EMAIL_ALREADY_USED_TYPE, LOGIN_ALREADY_USED_TYPE } from 'app/shared';
-import { LoginModalService } from 'app/core';
+import { EMAIL_ALREADY_USED_TYPE, LOGIN_ALREADY_USED_TYPE } from '../../shared';
+import { LoginModalService } from '../../core';
 import { Register } from './register.service';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'jhi-register',
@@ -26,7 +27,8 @@ export class RegisterComponent implements OnInit, AfterViewInit {
         private loginModalService: LoginModalService,
         private registerService: Register,
         private elementRef: ElementRef,
-        private renderer: Renderer
+        private renderer: Renderer,
+        private router: Router
     ) {}
 
     ngOnInit() {
@@ -36,6 +38,10 @@ export class RegisterComponent implements OnInit, AfterViewInit {
 
     ngAfterViewInit() {
         this.renderer.invokeElementMethod(this.elementRef.nativeElement.querySelector('#login'), 'focus', []);
+    }
+
+    previousState() {
+        window.history.back();
     }
 
     register() {
@@ -59,7 +65,8 @@ export class RegisterComponent implements OnInit, AfterViewInit {
     }
 
     openLogin() {
-        this.modalRef = this.loginModalService.open();
+        //  this.modalRef = this.loginModalService.open();
+        this.router.navigate(['/']);
     }
 
     private processError(response: HttpErrorResponse) {

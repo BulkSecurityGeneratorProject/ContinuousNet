@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRouteSnapshot, NavigationEnd } from '@angular/router';
 
-import { JhiLanguageHelper } from 'app/core';
+import { JhiLanguageHelper } from '../../core';
 
 @Component({
     selector: 'jhi-main',

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { JhiLanguageService } from 'ng-jhipster';
 
-import { Principal, AccountService, JhiLanguageHelper } from 'app/core';
+import { Principal, AccountService, JhiLanguageHelper } from '../../core';
 
 @Component({
     selector: 'jhi-settings',
@@ -27,6 +27,10 @@ export class SettingsComponent implements OnInit {
         this.languageHelper.getAll().then(languages => {
             this.languages = languages;
         });
+    }
+
+    previousState() {
+        window.history.back();
     }
 
     save() {

@@ -1,7 +1,7 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { ContinuousApplicationSharedModule } from 'app/shared';
+import { ContinuousApplicationSharedModule } from '../shared';
 
 import {
     PasswordStrengthBarComponent,
